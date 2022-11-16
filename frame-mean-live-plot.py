@@ -1,4 +1,7 @@
 #live plot of frame mean and fpa temp
+from flirpy.camera.boson import Boson
+from matplotlib import pyplot as plt
+
 mean=[]
 fpa_tmp=[]
 with Boson() as camera:
@@ -14,4 +17,4 @@ with Boson() as camera:
         plt.subplot(212)
         plt.plot(fpa_tmp)
         plt.show()
-        clear_output(wait=True)
+        plt.clf()
