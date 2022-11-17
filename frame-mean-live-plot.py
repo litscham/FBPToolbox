@@ -7,9 +7,8 @@ fpa_tmp=[]
 with Boson() as camera:
     camera.do_ffc()
     while True:
-        frame = [] 
         frame=camera.grab()
-        mean.append(frame)
+        mean.append(np.mean(frame))
         fpa_tmp.append(camera.get_fpa_temperature())
         std.append(np.std(pixel))
         plt.subplot(211)
