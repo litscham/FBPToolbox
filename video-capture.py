@@ -1,6 +1,7 @@
 #live view with video capture
 import cv2
 from flirpy.camera.boson import Boson
+import numpy as np
 
 video = cv2.VideoCapture(0)
 frame_width = int(video.get(3))
