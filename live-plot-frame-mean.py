@@ -19,8 +19,8 @@ def animate(i):
         ax1.clear()
         ax2.clear()
         ax1.scatter(x,avg)
-        ax1.hlines(rms,0,len(x),'r')
-        ax1.text(0,rms,'mean %d'%mean)
+        ax1.hlines(mean,0,len(x),'r')
+        ax1.text(0,mean,'mean %d'%mean)
         ax2.plot(x,fpa_tmp)
 
 ani = FuncAnimation(fig, animate, interval=17)
